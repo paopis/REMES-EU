@@ -102,6 +102,11 @@ sum((com,cntt)$(ord(cnt) ne ord(cntt)),TRADEZ(com,cnt,cntt))+sum(com,EROWZ(cnt,c
 
 display balanceER,bER;
 
+parameter balanceERext;
+balanceERext=
+ sum((cnt,com)$sameas(com,"pELE"),EROWZ(cnt,com))+sum((cnt,com)$(not sameas(com,"pELE") and not sameas(com,"pH2")),EROWZ(cnt,com))
+         -sum((cnt,com)$(not sameas(com,"pH2")),MROWZ(cnt,com))+sum(cnt,TRHROWZ(cnt)+TRROWZ(cnt)+SROWZ(cnt));
 
+display balanceERext, gdp_p;
 * the SAM is unbalanced.
 * It can be balanced by subtracting the unbalance from the tax_com fields
