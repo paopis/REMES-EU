@@ -8,8 +8,8 @@ Created on Fri Nov 13 21:39:05 2020
 import pyam
 
 # set username to get access to the scenario explorer
-user_name = 'paopis'
-user_password = '80114429Dic80'
+user_name = ''
+user_password = ''
 pyam.iiasa.set_config(user_name,user_password)
 
 pyam.iiasa.Connection('openentrance')
